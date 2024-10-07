@@ -6,3 +6,9 @@
     --radius: 0.5rem;
   }
 }
+
+@layer utilities {
+  h1 {
+    @apply text-6xl font-bold;
+  }
+}
