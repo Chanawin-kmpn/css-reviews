@@ -2,8 +2,8 @@ import React from "react";
 
 const CSSAnatomyPage = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="mb-6 text-center text-3xl font-bold text-blue-600">
+    <div className="container mx-auto px-4 py-8 text-white">
+      <h1 className="mb-6 text-center text-3xl font-bold text-blue-200">
         ส่วนประกอบของ CSS
       </h1>
 
@@ -18,8 +18,8 @@ const CSSAnatomyPage = () => {
         </p>
       </div>
 
-      <div className="rounded-lg bg-white p-6 shadow-md">
-        <h2 className="mb-4 text-2xl font-semibold text-blue-700">
+      <div className="rounded-lg bg-stone-800 p-6 shadow-md">
+        <h2 className="mb-4 text-2xl font-semibold text-blue-300">
           Anatomy of a Style Rule
         </h2>
         <p className="mb-4">
@@ -28,20 +28,20 @@ const CSSAnatomyPage = () => {
         </p>
         <ol className="mb-4 list-inside list-decimal space-y-2">
           <li>
-            <strong className="text-blue-600">Selector:</strong> เลือกองค์ประกอบ
+            <strong className="text-blue-200">Selector:</strong> เลือกองค์ประกอบ
             HTML ที่จะใช้สไตล์
           </li>
           <li>
-            <strong className="text-blue-600">Declaration Block:</strong>{" "}
+            <strong className="text-blue-200">Declaration Block:</strong>{" "}
             ประกอบด้วยหนึ่งหรือหลาย declarations ที่อยู่ภายในวงเล็บปีกกา {}
           </li>
           <li>
-            <strong className="text-blue-600">Declaration:</strong> ประกอบด้วย
+            <strong className="text-blue-200">Declaration:</strong> ประกอบด้วย
             property และ value คั่นด้วยเครื่องหมายทวิภาค (:)
             และจบด้วยเครื่องหมายอัฒภาค (;)
           </li>
         </ol>
-        <div className="rounded-md bg-gray-100 p-4">
+        <div className="rounded-md bg-stone-900 p-4 text-white">
           <pre className="text-sm">
             <code>
               selector {"{"}
@@ -52,9 +52,9 @@ const CSSAnatomyPage = () => {
         </div>
       </div>
 
-      <div className="mt-8 rounded-lg bg-blue-50 p-6 shadow-md">
-        <h3 className="mb-4 text-xl font-semibold text-blue-700">ตัวอย่าง:</h3>
-        <div className="rounded-md bg-white p-4">
+      <div className="mt-8 rounded-lg bg-stone-800 p-6 shadow-md">
+        <h3 className="mb-4 text-xl font-semibold text-blue-300">ตัวอย่าง:</h3>
+        <div className="rounded-md bg-stone-900 p-4">
           <pre className="text-sm">
             <code>
               p {"{"}
@@ -66,15 +66,15 @@ const CSSAnatomyPage = () => {
         <p className="mt-4">ในตัวอย่างนี้:</p>
         <ul className="mt-2 list-inside list-disc space-y-2">
           <li>
-            <strong className="text-blue-600">Selector:</strong> p (เลือกทุก
+            <strong className="text-blue-200">Selector:</strong> p (เลือกทุก
             paragraph elements)
           </li>
           <li>
-            <strong className="text-blue-600">Declaration Block:</strong>{" "}
+            <strong className="text-blue-200">Declaration Block:</strong>{" "}
             ทุกอย่างภายในวงเล็บปีกกา {"{}"}
           </li>
           <li>
-            <strong className="text-blue-600">Declarations:</strong>
+            <strong className="text-blue-200">Declarations:</strong>
             <ul className="ml-4 list-inside list-disc">
               <li>color: red;</li>
               <li>font-size: 16px;</li>
