@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExampleBox = ({ children, style }: { children: any; style: any }) => (
+const ExampleBox = ({ children, style }: { children?: any; style?: any }) => (
   <div
     style={{
       ...style,
