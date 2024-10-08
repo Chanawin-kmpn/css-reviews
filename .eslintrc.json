@@ -1,8 +1,11 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "next/typescript",
-    "strandard",
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
