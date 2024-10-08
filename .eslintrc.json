@@ -1,10 +1,13 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "standard-with-typescript",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
   "parserOptions": {
     "project": "./tsconfig.json"
   }

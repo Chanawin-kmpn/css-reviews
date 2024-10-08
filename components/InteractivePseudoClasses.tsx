@@ -1,17 +1,22 @@
 "use client";
 import React, { useState } from "react";
 
-const InteractivePseudoClasses = () => {
-  const [checkedItems, setCheckedItems] = useState({});
+interface CheckedItems {
+  [key: string]: boolean;
+}
 
-  const handleCheckboxChange = (event: {
-    target: { name: any; checked: any };
-  }) => {
-    setCheckedItems({
-      ...checkedItems,
-      [event.target.name]: event.target.checked,
-    });
+const InteractivePseudoClasses = () => {
+  const [checkedItems, setCheckedItems] = useState<CheckedItems>({});
+
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = event.target;
+    setCheckedItems((prevItems) => ({
+      ...prevItems,
+      [name]: checked,
+    }));
   };
+
+  const toppings = ["เห็ด", "แฮม", "สับปะรด", "พริก"];
 
   const CSSExample = ({ code }: any) => (
     <pre className="overflow-x-auto rounded-md bg-stone-800 p-2 text-sm">
@@ -106,14 +111,14 @@ const InteractivePseudoClasses = () => {
           <div className="w-full pr-4 md:w-1/2">
             <p className="mb-4">เลือกท็อปปิ้งพิซซ่าที่คุณชอบ:</p>
             <div className="space-y-2">
-              {["เห็ด", "แฮม", "สับปะรด", "พริก"].map((topping) => (
+              {toppings.map((topping) => (
                 <label key={topping} className="flex items-center">
                   <input
                     type="checkbox"
                     name={topping}
                     checked={checkedItems[topping] || false}
                     onChange={handleCheckboxChange}
-                    className="demo-checkbox"
+                    className="form-checkbox h-5 w-5 text-blue-600"
                   />
                   <span className="ml-2">{topping}</span>
                 </label>
